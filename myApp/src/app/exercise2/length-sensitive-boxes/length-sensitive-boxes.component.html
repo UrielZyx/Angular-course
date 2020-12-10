@@ -1,4 +1,4 @@
-<input type="text" #first (change)="updateFirst(first.value)"><br/>
-<input type="text" #second (change)="updateSecond(second.value)"><br/>
+<input type="text" #first (keyup)="updateFirst(first.value)"><br/>
+<input type="text" #second (keyup)="updateSecond(second.value)"><br/>
 {{label1}}<br/>
 {{label2}}
