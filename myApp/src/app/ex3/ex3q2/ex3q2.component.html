@@ -1,0 +1,11 @@
+<h2>3.2</h2>
+
+<input type="checkbox" value="Red" (change)="isRedChecked = !isRedChecked">
+<input type="checkbox" value="Blue" (change)="isBlueChecked = !isBlueChecked">
+<input type="checkbox" value="Green" (change)="isGreenChecked = !isGreenChecked">
+
+<ul>
+    <li *ngIf="isRedChecked">Red</li>
+    <li *ngIf="isBlueChecked">Blue</li>
+    <li *ngIf="isGreenChecked">Green</li>
+</ul>

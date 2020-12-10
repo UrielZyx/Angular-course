@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { PersonCompComponent } from './exercise2/person-comp/person-comp.component';
 import { LengthSensitiveBoxesComponent } from './exercise2/length-sensitive-boxes/length-sensitive-boxes.component';
 import { Ex3q1Component } from './ex3/ex3q1/ex3q1.component';
+import { Ex3q2Component } from './ex3/ex3q2/ex3q2.component';
+import { Ex3q3Component } from './ex3/ex3q3/ex3q3.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonCompComponent,
     LengthSensitiveBoxesComponent,
-    Ex3q1Component
+    Ex3q1Component,
+    Ex3q2Component,
+    Ex3q3Component
   ],
   imports: [
     BrowserModule,

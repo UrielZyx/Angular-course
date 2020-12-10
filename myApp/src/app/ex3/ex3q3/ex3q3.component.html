@@ -1,0 +1,18 @@
+<h2>3.3 - 3.4</h2>
+
+
+<ul *ngFor="let user of users">
+    <li>{{user.name}}</li>
+    <ol>
+        <li>{{user.age}}</li>
+        <li>{{user.city}}</li>
+    </ol>
+</ul>
+
+<table border="1">
+    <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.city}}</td>
+    </tr>
+</table>
