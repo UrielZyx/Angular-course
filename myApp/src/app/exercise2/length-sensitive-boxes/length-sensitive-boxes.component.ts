@@ -20,15 +20,15 @@ export class LengthSensitiveBoxesComponent implements OnInit {
 
   updateFirst(txt : String) :void {
     this.first = txt
-    this.swap()
+    this.swapIfNeeded()
   }
 
   updateSecond(txt: String) :void {
     this.second = txt
-    this.swap()
+    this.swapIfNeeded()
   }
 
-  swap() : void {
+  swapIfNeeded() : void {
     if(this.first.length > 4 || this.second.length > 4) {
       this.label1 = this.second
       this.label2 = this.first
