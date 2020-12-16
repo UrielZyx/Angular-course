@@ -8,6 +8,7 @@ import { LengthSensitiveBoxesComponent } from './exercise2/length-sensitive-boxe
 import { Ex3q1Component } from './ex3/ex3q1/ex3q1.component';
 import { Ex3q2Component } from './ex3/ex3q2/ex3q2.component';
 import { Ex3q3Component } from './ex3/ex3q3/ex3q3.component';
+import { Ex2q3Component } from './exercise2/ex2q3/ex2q3.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { Ex3q3Component } from './ex3/ex3q3/ex3q3.component';
     LengthSensitiveBoxesComponent,
     Ex3q1Component,
     Ex3q2Component,
-    Ex3q3Component
+    Ex3q3Component,
+    Ex2q3Component
   ],
   imports: [
     BrowserModule,
