@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Ex2q3Component implements OnInit {
 
-  x:String = ""
+  x:string = ""
   isChecked:boolean = false
   valueForTesting:boolean = false
 

@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonCompComponent implements OnInit {
 
-  value1 : String = "Uriel"
-  value2 : String = "29"
+  value1 : string = "Uriel"
+  value2 : string = "29"
 
   constructor() { }
 
@@ -16,7 +16,7 @@ export class PersonCompComponent implements OnInit {
   }
 
   swap() : void {
-    var tmp : String = this.value1
+    var tmp : string = this.value1
     this.value1 = this.value2
     this.value2 = tmp
   }

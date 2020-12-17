@@ -18,12 +18,12 @@ export class LengthSensitiveBoxesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  updateFirst(txt : String) :void {
+  updateFirst(txt : string) :void {
     this.first = txt
     this.swapIfNeeded()
   }
 
-  updateSecond(txt: String) :void {
+  updateSecond(txt: string) :void {
     this.second = txt
     this.swapIfNeeded()
   }
