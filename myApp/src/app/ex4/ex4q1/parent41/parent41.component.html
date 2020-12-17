@@ -1,6 +1,6 @@
 <h2>4.1 Parent</h2>
 <input type="text" #name (keyup)="changeName(name.value)"><br/>
-<input type="text" #age (keyup)="changeAge(age.value)"><br/>
+<input type="number" #age (keyup)="changeAge(age.value)"><br/>
 <input type="checkbox" #hasLicense (change)="changeLicense(hasLicense.checked)"><br/>
 
 <app-child41 [person]="person"></app-child41>

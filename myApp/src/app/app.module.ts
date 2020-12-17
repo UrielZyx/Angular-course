@@ -11,6 +11,8 @@ import { Ex3q3Component } from './ex3/ex3q3/ex3q3.component';
 import { Ex2q3Component } from './exercise2/ex2q3/ex2q3.component';
 import { Parent41Component } from './ex4/ex4q1/parent41/parent41.component';
 import { Child41Component } from './ex4/ex4q1/child41/child41.component';
+import { Parent42Component } from './ex4/ex4q2/parent42/parent42.component';
+import { Child42Component } from './ex4/ex4q2/child42/child42.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { Child41Component } from './ex4/ex4q1/child41/child41.component';
     Ex3q3Component,
     Ex2q3Component,
     Parent41Component,
-    Child41Component
+    Child41Component,
+    Parent42Component,
+    Child42Component
   ],
   imports: [
     BrowserModule,
