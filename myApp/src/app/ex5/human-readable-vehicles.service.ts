@@ -10,6 +10,6 @@ export class HumanReadableVehiclesService {
 
   getVehiclesData(): string[] {
     return this.vehiclesService.getVehiclesData()
-                .map(v => (v.type + " has " + v.wheels + " wheels"))
+                .map(v => (`${v.type} has ${v.wheels} wheels`))
   }
 }
