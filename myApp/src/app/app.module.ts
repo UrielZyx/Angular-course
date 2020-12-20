@@ -14,6 +14,9 @@ import { Child41Component } from './ex4/ex4q1/child41/child41.component';
 import { Parent42Component } from './ex4/ex4q2/parent42/parent42.component';
 import { Child42Component } from './ex4/ex4q2/child42/child42.component';
 import { Ex5q2Component } from './ex5/ex5q2/ex5q2.component';
+import { People44Component } from './ex4/ex4q4/people44/people44.component';
+import { Person44Component } from './ex4/ex4q4/person44/person44.component';
+import { Task44Component } from './ex4/ex4q4/task44/task44.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { Ex5q2Component } from './ex5/ex5q2/ex5q2.component';
     Child41Component,
     Parent42Component,
     Child42Component,
-    Ex5q2Component
+    Ex5q2Component,
+    People44Component,
+    Person44Component,
+    Task44Component
   ],
   imports: [
     BrowserModule,
