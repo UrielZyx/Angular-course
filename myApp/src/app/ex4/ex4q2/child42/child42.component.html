@@ -1,6 +1,6 @@
 <h3>4.2 Child</h3>
 Name: <input type="text" #name (keyup)="person.name = name.value"><br/>
-Age: <input type="number" #age (keyup)="person.age = age.value"><br/>
+Age: <input type="number" #age (keyup)="person.age = +age.value"><br/>
 City: 
     <select #city (change)="person.city = city.value">
         <option value="" selected disabled hidden>Choose here</option>

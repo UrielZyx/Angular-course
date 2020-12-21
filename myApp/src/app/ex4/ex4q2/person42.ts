@@ -13,7 +13,7 @@ export class Person42 {
     }
 
     name: string = ""
-    age: string = ""
+    age: number = 0
     city: string = ""
     isAdult: boolean = false
 }

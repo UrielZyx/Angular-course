@@ -21,5 +21,4 @@ export class Child42Component implements OnInit {
   addPerson(): void {
     this.add.emit(this.person.clone())
   }
-
 }
