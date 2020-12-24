@@ -1,0 +1,10 @@
+<h2>7.3</h2>
+User id: <input type="number" #id>
+<input type="button" value="Get user" (click)="getUser(+id.value)">
+<br/><br/>
+
+<form #f="ngForm" (ngSubmit)="updateUser()">
+    Name: <input type="text" name="name" [(ngModel)]="user.name"><br/>
+    Email: <input type="email" name="email" [(ngModel)]="user.email"><br/>
+    <input type="submit" value="Update user">
+</form>

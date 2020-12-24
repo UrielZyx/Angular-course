@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { People44Component } from './ex4/ex4q4/people44/people44.component';
 import { Person44Component } from './ex4/ex4q4/person44/person44.component';
 import { Task44Component } from './ex4/ex4q4/task44/task44.component';
 import { Ex6q1Component } from './ex6/ex6q1/ex6q1.component';
+import { Ex7q3Component } from './ex7/ex7q3/ex7q3.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +39,14 @@ import { Ex6q1Component } from './ex6/ex6q1/ex6q1.component';
     People44Component,
     Person44Component,
     Task44Component,
-    Ex6q1Component
+    Ex6q1Component,
+    Ex7q3Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
