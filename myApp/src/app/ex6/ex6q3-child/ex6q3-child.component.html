@@ -1,0 +1,11 @@
+<h3>User Data</h3>
+{{user.name}}<br/>
+{{user.email}}<br/>
+
+<input type="button" value="Tasks" (click)="showTasks()">
+
+<h4 *ngIf="areTasksVisible">Tasks:</h4>
+
+<ul>
+    <li *ngFor="let t of tasks">{{t.title}}</li>
+</ul>

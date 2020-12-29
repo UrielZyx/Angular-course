@@ -21,6 +21,8 @@ import { Person44Component } from './ex4/ex4q4/person44/person44.component';
 import { Task44Component } from './ex4/ex4q4/task44/task44.component';
 import { Ex6q1Component } from './ex6/ex6q1/ex6q1.component';
 import { Ex7q3Component } from './ex7/ex7q3/ex7q3.component';
+import { Ex6q3Component } from './ex6/ex6q3/ex6q3.component';
+import { Ex6q3ChildComponent } from './ex6/ex6q3-child/ex6q3-child.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { Ex7q3Component } from './ex7/ex7q3/ex7q3.component';
     Person44Component,
     Task44Component,
     Ex6q1Component,
-    Ex7q3Component
+    Ex7q3Component,
+    Ex6q3Component,
+    Ex6q3ChildComponent
   ],
   imports: [
     BrowserModule,
