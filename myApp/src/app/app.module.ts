@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes} from '@angular/router'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,14 @@ import { Ex6q1Component } from './ex6/ex6q1/ex6q1.component';
 import { Ex7q3Component } from './ex7/ex7q3/ex7q3.component';
 import { Ex6q3Component } from './ex6/ex6q3/ex6q3.component';
 import { Ex6q3ChildComponent } from './ex6/ex6q3-child/ex6q3-child.component';
+import { MainPageComponent } from './spa-demo/main-page/main-page.component';
+import { AboutComponent } from './spa-demo/about/about.component';
+import { ContactComponent } from './spa-demo/contact/contact.component';
+
+const routes: Routes = [
+  {path: "contact", component: ContactComponent},
+  {path: "about", component: AboutComponent}
+]
 
 @NgModule({
   declarations: [
@@ -44,13 +53,18 @@ import { Ex6q3ChildComponent } from './ex6/ex6q3-child/ex6q3-child.component';
     Ex6q1Component,
     Ex7q3Component,
     Ex6q3Component,
-    Ex6q3ChildComponent
+    Ex6q3ChildComponent,
+    MainPageComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
