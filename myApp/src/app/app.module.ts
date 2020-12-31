@@ -35,6 +35,8 @@ import { Ex8q1welcomeComponent } from './ex8/ex8q1/ex8q1welcome/ex8q1welcome.com
 import { Ex8q1nameInputComponent } from './ex8/ex8q1/ex8q1name-input/ex8q1name-input.component';
 import { Ex8q1ageInputComponent } from './ex8/ex8q1/ex8q1age-input/ex8q1age-input.component';
 import { Ex8q1displayComponent } from './ex8/ex8q1/ex8q1display/ex8q1display.component';
+import { Ex6q3mainComponent } from './ex6/ex6q3/ex6q3main/ex6q3main.component';
+import { Ex6q3tasksComponent } from './ex6/ex6q3/ex6q3tasks/ex6q3tasks.component';
 
 const routes: Routes = [
   //SPA demo
@@ -50,6 +52,10 @@ const routes: Routes = [
   // {path: "name", component: Ex8q1nameInputComponent},
   // {path: "age", component: Ex8q1ageInputComponent},
   // {path: "display", component: Ex8q1displayComponent}
+  
+  //Ex6Q3
+  {path: "", component: Ex6q3Component},
+  {path: "tasks/:id", component: Ex6q3tasksComponent}
 ]
 
 @NgModule({
@@ -85,6 +91,8 @@ const routes: Routes = [
     Ex8q1nameInputComponent,
     Ex8q1ageInputComponent,
     Ex8q1displayComponent,
+    Ex6q3mainComponent,
+    Ex6q3tasksComponent,
   ],
   imports: [
     BrowserModule,

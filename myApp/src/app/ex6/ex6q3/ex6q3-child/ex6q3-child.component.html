@@ -1,10 +1,12 @@
-<h3>User Data</h3>
+<h4>User Data</h4>
 {{user.name}}<br/>
 {{user.email}}<br/>
 
-<input type="button" value="Tasks" (click)="showTasks()">
+<a [routerLink]="['tasks/',user.id]">Switch to tasks</a><br/>
 
-<h4 *ngIf="areTasksVisible">Tasks:</h4>
+<input type="button" value="Show top tasks" (click)="showTasks()">
+
+<h5 *ngIf="areTasksVisible">Tasks:</h5>
 
 <ul>
     <li *ngFor="let t of tasks">{{t.title}}</li>

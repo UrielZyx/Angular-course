@@ -28,10 +28,8 @@ export class Ex6q3ChildComponent implements OnInit {
   showTasks():void {
     this.areTasksVisible = true
     this.sub = this.service.getAllTasksByUserId(this.user.id)
-    // this.service.getAllTasks()
       .subscribe(taskList => {
         this.tasks = taskList
-          // .filter(t => t.userId == this.user.id)
           .slice(0,3)
       })
   }
