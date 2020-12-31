@@ -27,10 +27,18 @@ import { Ex6q3ChildComponent } from './ex6/ex6q3-child/ex6q3-child.component';
 import { MainPageComponent } from './spa-demo/main-page/main-page.component';
 import { AboutComponent } from './spa-demo/about/about.component';
 import { ContactComponent } from './spa-demo/contact/contact.component';
+import { Ex8q2mainComponent } from './ex8/ex8q2main/ex8q2main.component';
+import { Ex8q2masterComponent } from './ex8/ex8q2master/ex8q2master.component';
+import { Ex8q2detailsComponent } from './ex8/ex8q2details/ex8q2details.component';
 
 const routes: Routes = [
-  {path: "contact", component: ContactComponent},
-  {path: "about", component: AboutComponent}
+  //SPA demo
+  // {path: "contact", component: ContactComponent},
+  // {path: "about", component: AboutComponent}
+  
+  //Ex8Q2
+  {path: "", component: Ex8q2masterComponent},
+  {path: "user/:id", component: Ex8q2detailsComponent}
 ]
 
 @NgModule({
@@ -56,7 +64,10 @@ const routes: Routes = [
     Ex6q3ChildComponent,
     MainPageComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    Ex8q2mainComponent,
+    Ex8q2masterComponent,
+    Ex8q2detailsComponent
   ],
   imports: [
     BrowserModule,
