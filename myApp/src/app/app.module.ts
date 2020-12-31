@@ -22,8 +22,8 @@ import { Person44Component } from './ex4/ex4q4/person44/person44.component';
 import { Task44Component } from './ex4/ex4q4/task44/task44.component';
 import { Ex6q1Component } from './ex6/ex6q1/ex6q1.component';
 import { Ex7q3Component } from './ex7/ex7q3/ex7q3.component';
-import { Ex6q3Component } from './ex6/ex6q3/ex6q3.component';
-import { Ex6q3ChildComponent } from './ex6/ex6q3-child/ex6q3-child.component';
+import { Ex6q3Component } from './ex6/ex6q3/exq6parent/ex6q3.component';
+import { Ex6q3ChildComponent } from './ex6/ex6q3/ex6q3-child/ex6q3-child.component';
 import { MainPageComponent } from './spa-demo/main-page/main-page.component';
 import { AboutComponent } from './spa-demo/about/about.component';
 import { ContactComponent } from './spa-demo/contact/contact.component';
@@ -46,10 +46,10 @@ const routes: Routes = [
   // {path: "user/:id", component: Ex8q2detailsComponent}
 
   //Ex8Q1
-  {path: "", component: Ex8q1welcomeComponent},
-  {path: "name", component: Ex8q1nameInputComponent},
-  {path: "age", component: Ex8q1ageInputComponent},
-  {path: "display", component: Ex8q1displayComponent}
+  // {path: "", component: Ex8q1welcomeComponent},
+  // {path: "name", component: Ex8q1nameInputComponent},
+  // {path: "age", component: Ex8q1ageInputComponent},
+  // {path: "display", component: Ex8q1displayComponent}
 ]
 
 @NgModule({
