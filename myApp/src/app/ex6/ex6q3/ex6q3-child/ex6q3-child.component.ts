@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Ex6q3Service } from '../../ex6q3.service';
+import { Ex6q3Service } from '../ex6q3.service';
 
 @Component({
   selector: 'app-ex6q3-child',
