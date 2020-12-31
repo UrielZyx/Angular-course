@@ -27,9 +27,14 @@ import { Ex6q3ChildComponent } from './ex6/ex6q3-child/ex6q3-child.component';
 import { MainPageComponent } from './spa-demo/main-page/main-page.component';
 import { AboutComponent } from './spa-demo/about/about.component';
 import { ContactComponent } from './spa-demo/contact/contact.component';
-import { Ex8q2mainComponent } from './ex8/ex8q2main/ex8q2main.component';
-import { Ex8q2masterComponent } from './ex8/ex8q2master/ex8q2master.component';
-import { Ex8q2detailsComponent } from './ex8/ex8q2details/ex8q2details.component';
+import { Ex8q2mainComponent } from './ex8/ex8q2/ex8q2main/ex8q2main.component';
+import { Ex8q2masterComponent } from './ex8/ex8q2/ex8q2master/ex8q2master.component';
+import { Ex8q2detailsComponent } from './ex8/ex8q2/ex8q2details/ex8q2details.component';
+import { Ex8q1mainComponent } from './ex8/ex8q1/ex8q1main/ex8q1main.component';
+import { Ex8q1welcomeComponent } from './ex8/ex8q1/ex8q1welcome/ex8q1welcome.component';
+import { Ex8q1nameInputComponent } from './ex8/ex8q1/ex8q1name-input/ex8q1name-input.component';
+import { Ex8q1ageInputComponent } from './ex8/ex8q1/ex8q1age-input/ex8q1age-input.component';
+import { Ex8q1displayComponent } from './ex8/ex8q1/ex8q1display/ex8q1display.component';
 
 const routes: Routes = [
   //SPA demo
@@ -37,8 +42,14 @@ const routes: Routes = [
   // {path: "about", component: AboutComponent}
   
   //Ex8Q2
-  {path: "", component: Ex8q2masterComponent},
-  {path: "user/:id", component: Ex8q2detailsComponent}
+  // {path: "", component: Ex8q2masterComponent},
+  // {path: "user/:id", component: Ex8q2detailsComponent}
+
+  //Ex8Q1
+  {path: "", component: Ex8q1welcomeComponent},
+  {path: "name", component: Ex8q1nameInputComponent},
+  {path: "age", component: Ex8q1ageInputComponent},
+  {path: "display", component: Ex8q1displayComponent}
 ]
 
 @NgModule({
@@ -67,7 +78,13 @@ const routes: Routes = [
     ContactComponent,
     Ex8q2mainComponent,
     Ex8q2masterComponent,
-    Ex8q2detailsComponent
+    Ex8q2detailsComponent,
+    Ex8q2mainComponent,
+    Ex8q1mainComponent,
+    Ex8q1welcomeComponent,
+    Ex8q1nameInputComponent,
+    Ex8q1ageInputComponent,
+    Ex8q1displayComponent,
   ],
   imports: [
     BrowserModule,
