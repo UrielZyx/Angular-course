@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Ex6q3Service } from '../ex6q3.service';
 
 @Component({
@@ -12,15 +13,21 @@ export class Ex6q3ChildComponent implements OnInit {
   user: any
   areTasksVisible: boolean = false
   tasks: any[] = []
+  
+  sub: Subscription = new Subscription
 
   constructor(private service: Ex6q3Service) { }
 
   ngOnInit(): void {
   }
 
+  ngOnDestroy(): void {
+    this.sub.unsubscribe()
+  }
+
   showTasks():void {
     this.areTasksVisible = true
-    this.service.getAllTasksByUserId(this.user.id)
+    this.sub = this.service.getAllTasksByUserId(this.user.id)
     // this.service.getAllTasks()
       .subscribe(taskList => {
         this.tasks = taskList

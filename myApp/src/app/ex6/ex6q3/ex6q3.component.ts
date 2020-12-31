@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Ex6q3Service } from '../ex6q3.service';
 
 @Component({
@@ -10,11 +11,17 @@ export class Ex6q3Component implements OnInit {
 
   users: any[] = []
   
+  sub: Subscription = new Subscription
+  
   constructor(private service: Ex6q3Service) { }
 
   ngOnInit(): void {
-    this.service.getAllUsers()
+    this.sub = this.service.getAllUsers()
       .subscribe(u => this.users = u)
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe()
   }
 
 }

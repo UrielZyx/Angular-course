@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-ex6q1',
@@ -11,13 +12,19 @@ export class Ex6q1Component implements OnInit {
   user: any = {}
   todos: any[] = []
 
+  sub: Subscription[] = []
+
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
   }
 
+  ngOnDestroy(): void {
+    this.sub.forEach(s => s.unsubscribe())
+  }
+
   getUser(id: number): void {
-    this.http.get("https://jsonplaceholder.typicode.com/users/" + id)
+    this.sub[0] = this.http.get("https://jsonplaceholder.typicode.com/users/" + id)
       .subscribe(data => {
         this.user = data
 
@@ -35,7 +42,7 @@ export class Ex6q1Component implements OnInit {
   }
 
   getTodos(): void {
-    this.http.get<any[]>("https://jsonplaceholder.typicode.com/todos")
+    this.sub[0] = this.http.get<any[]>("https://jsonplaceholder.typicode.com/todos")
       .subscribe(data => {
         this.todos = data.filter(task => task.userId == this.user.id)
       })    
