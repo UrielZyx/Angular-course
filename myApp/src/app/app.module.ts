@@ -37,6 +37,10 @@ import { Ex8q1ageInputComponent } from './ex8/ex8q1/ex8q1age-input/ex8q1age-inpu
 import { Ex8q1displayComponent } from './ex8/ex8q1/ex8q1display/ex8q1display.component';
 import { Ex6q3mainComponent } from './ex6/ex6q3/ex6q3main/ex6q3main.component';
 import { Ex6q3tasksComponent } from './ex6/ex6q3/ex6q3tasks/ex6q3tasks.component';
+import { UserListComponent } from './homework/user-list/user-list.component';
+import { TaskListComponent } from './homework/task-list/task-list.component';
+import { UserComponent } from './homework/user/user.component';
+import { UsersMainPageComponent } from './homework/users-main-page/users-main-page.component';
 
 const routes: Routes = [
   //SPA demo
@@ -54,8 +58,12 @@ const routes: Routes = [
   // {path: "display", component: Ex8q1displayComponent}
   
   //Ex6Q3
-  {path: "", component: Ex6q3Component},
-  {path: "tasks/:id", component: Ex6q3tasksComponent}
+  // {path: "", component: Ex6q3Component},
+  // {path: "tasks/:id", component: Ex6q3tasksComponent}
+
+  //Routing Hoemwork
+  {path: "", component: UserListComponent},
+  {path: "tasks/:id", component: TaskListComponent}
 ]
 
 @NgModule({
@@ -93,6 +101,10 @@ const routes: Routes = [
     Ex8q1displayComponent,
     Ex6q3mainComponent,
     Ex6q3tasksComponent,
+    UserListComponent,
+    TaskListComponent,
+    UserComponent,
+    UsersMainPageComponent,
   ],
   imports: [
     BrowserModule,

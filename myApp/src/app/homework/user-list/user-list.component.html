@@ -1,0 +1,9 @@
+<h3>Users</h3>
+
+<!-- <div *ngFor="let u of users">
+    <h4>User Data</h4>
+    {{u.name}}<br/>
+    {{u.email}}
+</div> -->
+
+<app-user *ngFor="let u of users" [user]="u"></app-user>
