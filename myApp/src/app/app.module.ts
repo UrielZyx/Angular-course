@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes} from '@angular/router'
+import { RouterModule, Routes} from '@angular/router';
+import { StoreModule } from '@ngrx/store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -41,6 +42,10 @@ import { UserListComponent } from './homework/user-list/user-list.component';
 import { TaskListComponent } from './homework/task-list/task-list.component';
 import { UserComponent } from './homework/user/user.component';
 import { UsersMainPageComponent } from './homework/users-main-page/users-main-page.component';
+import { Ex9UserComponent } from './ex9/ex9-user/ex9-user.component';
+import { Ex9AllUsersComponent } from './ex9/ex9-all-users/ex9-all-users.component';
+import { Ex9AdultsComponent } from './ex9/ex9-adults/ex9-adults.component';
+import { MyReducer } from './reducer';
 
 const routes: Routes = [
   //SPA demo
@@ -62,8 +67,8 @@ const routes: Routes = [
   // {path: "tasks/:id", component: Ex6q3tasksComponent}
 
   //Routing Hoemwork
-  {path: "", component: UserListComponent},
-  {path: "tasks/:id", component: TaskListComponent}
+  // {path: "", component: UserListComponent},
+  // {path: "tasks/:id", component: TaskListComponent}
 ]
 
 @NgModule({
@@ -105,13 +110,17 @@ const routes: Routes = [
     TaskListComponent,
     UserComponent,
     UsersMainPageComponent,
+    Ex9UserComponent,
+    Ex9AllUsersComponent,
+    Ex9AdultsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    StoreModule.forRoot({reducer: MyReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]

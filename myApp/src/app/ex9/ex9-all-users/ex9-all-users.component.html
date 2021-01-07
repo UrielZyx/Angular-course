@@ -1,0 +1,11 @@
+<h3>All users:</h3>
+
+<table border="1">
+    <tr *ngFor="let u of users | async">
+        <td>{{u.id}}</td>
+        <td>{{u.name}}</td>
+        <td>{{u.age}}</td>
+    </tr>
+</table>
+
+<app-ex9-adults></app-ex9-adults>

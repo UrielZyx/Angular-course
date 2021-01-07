@@ -1,0 +1,11 @@
+<h2>9 - Users</h2>
+
+Id: <input type="number" #idBox (change)="id=+idBox.value"><br/>
+Name: <input type="text" #nameBox (keyup)="name=nameBox.value"><br/>
+Age: <input type="number" #ageBox (change)="age=+ageBox.value"><br/>
+<input type="button" value="Add" (click)="add()">
+<input type="button" value="Update" (click)="update()">
+<input type="button" value="Delete" (click)="delete()">
+<br/>
+
+<app-ex9-all-users></app-ex9-all-users>
