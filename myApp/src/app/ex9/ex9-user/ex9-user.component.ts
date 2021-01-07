@@ -27,6 +27,6 @@ export class Ex9UserComponent implements OnInit {
   }
 
   delete() {
-    this.store.dispatch({type: "DELETE", payload: {id: this.id}})
+    this.store.dispatch({type: "DELETE", payload: this.id})
   }
 }
