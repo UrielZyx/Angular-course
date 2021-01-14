@@ -21,7 +21,17 @@ router.post('/login', function(req, res) {
                              RSA_PRIVATE_KEY,
                             {expiresIn: 7200  } // expires in 2 hours
                             );
-        res.status(200).send({ token: tokenData });
+        
+        if(username == "") {
+            tokenData = ""   
+        }
+
+        let roleData = "user";
+        if(username == "Uriel") {
+            roleData = "admin"
+        }
+
+        res.status(200).send({ token: tokenData, role: roleData });
     }
     else
     {
