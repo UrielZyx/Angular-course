@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes} from '@angular/router';
 import { StoreModule } from '@ngrx/store';
@@ -46,6 +46,13 @@ import { Ex9UserComponent } from './ex9/ex9-user/ex9-user.component';
 import { Ex9AllUsersComponent } from './ex9/ex9-all-users/ex9-all-users.component';
 import { Ex9AdultsComponent } from './ex9/ex9-adults/ex9-adults.component';
 import { MyReducer } from './reducer';
+import { Ex10MainComponent } from './ex10/ex10-main/ex10-main.component';
+import { Ex10LoginComponent } from './ex10/ex10-login/ex10-login.component';
+import { Ex10ProductsComponent } from './ex10/ex10-products/ex10-products.component';
+import { Ex10UsersComponent } from './ex10/ex10-users/ex10-users.component';
+import { Ex10MenuComponent } from './ex10/ex10-menu/ex10-menu.component';
+import { Ex10GuardService } from './ex10/ex10-guard.service';
+import { Ex10AuthTokenInterceptorService } from './ex10/ex10-auth-token-interceptor.service';
 
 const routes: Routes = [
   //SPA demo
@@ -69,6 +76,12 @@ const routes: Routes = [
   //Routing Hoemwork
   // {path: "", component: UserListComponent},
   // {path: "tasks/:id", component: TaskListComponent}
+
+  //Ex10
+  {path: "", component: Ex10LoginComponent},
+  {path: "menu", component: Ex10MenuComponent},
+  {path: "products", component: Ex10ProductsComponent},
+  {path: "users", component: Ex10UsersComponent, canActivate: [Ex10GuardService]}
 ]
 
 @NgModule({
@@ -113,6 +126,11 @@ const routes: Routes = [
     Ex9UserComponent,
     Ex9AllUsersComponent,
     Ex9AdultsComponent,
+    Ex10MainComponent,
+    Ex10MenuComponent,
+    Ex10LoginComponent,
+    Ex10ProductsComponent,
+    Ex10UsersComponent,
   ],
   imports: [
     BrowserModule,
@@ -122,7 +140,9 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     StoreModule.forRoot({reducer: MyReducer})
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: Ex10AuthTokenInterceptorService, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
