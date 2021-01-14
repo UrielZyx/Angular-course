@@ -15,7 +15,7 @@ export class Ex9AdultsComponent implements OnInit {
   constructor(private store: Store<{reducer: IState}>) { }
 
   ngOnInit(): void {
-    this.users = this.store.select(data => data.reducer.users.filter(user => user.age > 18))
+    this.users = this.store.select(data => data.reducer.ex9.filter(user => user.age > 18))
   }
 
 }

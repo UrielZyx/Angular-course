@@ -1,29 +1,28 @@
 import { Action } from "@ngrx/store"
 
 export interface IState {
-    users: any[]
+    ex9: any[]
 }
 
-export function MyReducer(state: IState = {users: []}, action: any) {
+export function MyReducer(state: IState = {ex9: []}, action: any) {
 
-    debugger
     switch(action.type) {
-        case "ADD":
-            return {...state, users: [...state.users, action.payload]}
-        case "UPDATE":
-            let i = state.users.findIndex(u => u.id == action.payload.id)
+        case "EX9_ADD":
+            return {...state, ex9: [...state.ex9, action.payload]}
+        case "EX9_UPDATE":
+            let i = state.ex9.findIndex(u => u.id == action.payload.id)
             if(i >= 0) {
-                let arr = [...state.users]
+                let arr = [...state.ex9]
                 arr[i] = action.payload
-                return {...state, users: arr}
+                return {...state, ex9: arr}
             }
             return state
-        case "DELETE":
-            let j = state.users.findIndex(u => u.id == action.payload)
+        case "EX9_DELETE":
+            let j = state.ex9.findIndex(u => u.id == action.payload)
             if(j >= 0) {
-                let arr = [...state.users]
+                let arr = [...state.ex9]
                 arr.splice(j, 1)
-                return {...state, users: arr}
+                return {...state, ex9: arr}
             }
             return state
         default: return state

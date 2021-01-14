@@ -15,7 +15,7 @@ export class Ex9AllUsersComponent implements OnInit {
   constructor(private store: Store<{reducer: IState}>) { }
 
   ngOnInit(): void {
-    this.users = this.store.select(data => data.reducer.users)
+    this.users = this.store.select(data => data.reducer.ex9)
   }
 
 }

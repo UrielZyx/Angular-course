@@ -19,14 +19,14 @@ export class Ex9UserComponent implements OnInit {
   }
 
   add() {
-    this.store.dispatch({type: "ADD", payload: {id: this.id, name: this.name, age: this.age}})
+    this.store.dispatch({type: "EX9_ADD", payload: {id: this.id, name: this.name, age: this.age}})
   }
 
   update() {
-    this.store.dispatch({type: "UPDATE", payload: {id: this.id, name: this.name, age: this.age}})
+    this.store.dispatch({type: "EX9_UPDATE", payload: {id: this.id, name: this.name, age: this.age}})
   }
 
   delete() {
-    this.store.dispatch({type: "DELETE", payload: this.id})
+    this.store.dispatch({type: "EX9_DELETE", payload: this.id})
   }
 }
