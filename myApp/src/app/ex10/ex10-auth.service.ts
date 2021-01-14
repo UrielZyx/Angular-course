@@ -10,13 +10,12 @@ export class Ex10AuthService {
   constructor(private http: HttpClient) { }
 
   login(user: string, pwd: string) {
-    let resp: Observable<any> = this.http.post("http://localhost:8000/api/auth/login", {username: user, password: pwd})
-    resp
-      .subscribe((data: any) => {
-        sessionStorage["token"] = data.token
-        sessionStorage["role"] = data.role
-      })
-    return resp
+    return this.http.post("http://localhost:8000/api/auth/login", {username: user, password: pwd})
+  }
+
+  save(data: any) {
+    sessionStorage["token"] = data.token
+    sessionStorage["role"] = data.role
   }
 
   getToken() {

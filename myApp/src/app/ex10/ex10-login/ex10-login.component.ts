@@ -27,7 +27,8 @@ export class Ex10LoginComponent implements OnInit {
 
   login(){
     this.sub = this.authUtils.login(this.userName, this.password)
-      .subscribe(()=> {
+      .subscribe(data => {
+        this.authUtils.save(data)
         this.router.navigate(["/menu"])
       })
   }
