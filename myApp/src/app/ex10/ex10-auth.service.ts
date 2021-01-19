@@ -13,9 +13,13 @@ export class Ex10AuthService {
     return this.http.post("http://localhost:8000/api/auth/login", {username: user, password: pwd})
   }
 
-  save(data: any) {
+  authenticate(data: any): boolean {
+    if(!data.auth) {
+      return false
+    }
     sessionStorage["token"] = data.token
     sessionStorage["role"] = data.role
+    return true
   }
 
   getToken() {

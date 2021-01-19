@@ -13,6 +13,7 @@ export class Ex10LoginComponent implements OnInit {
 
   userName: string = ""
   password: string = ""
+  errorMessage: string = ""
 
   sub: Subscription = new Subscription()
 
@@ -28,8 +29,11 @@ export class Ex10LoginComponent implements OnInit {
   login(){
     this.sub = this.authUtils.login(this.userName, this.password)
       .subscribe(data => {
-        this.authUtils.save(data)
-        this.router.navigate(["/menu"])
+        if(this.authUtils.authenticate(data)){
+          this.router.navigate(["/menu"])
+        } else {
+          this.errorMessage = "Login failed"
+        }
       })
   }
 

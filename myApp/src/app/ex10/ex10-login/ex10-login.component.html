@@ -2,4 +2,6 @@
 
 User name: <input type="text" [(ngModel)]="userName"><br/>
 Password: <input type="text" [(ngModel)]="password"><br/><br/>
-<input type="button" value="Login" (click)="login()">
+<input type="button" value="Login" (click)="login()"><br/><br/>
+
+<div style="color:red">{{errorMessage}}</div>
