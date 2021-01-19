@@ -14,12 +14,9 @@ export class Ex10AuthService {
   }
 
   authenticate(data: any): boolean {
-    if(!data.auth) {
-      return false
-    }
     sessionStorage["token"] = data.token
     sessionStorage["role"] = data.role
-    return true
+    return data.auth
   }
 
   getToken() {

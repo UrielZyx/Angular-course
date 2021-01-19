@@ -1,0 +1,6 @@
+<h1>Login</h1>
+
+username: <input type="text" #userBox (keyup)="userName = userBox.value"><br/>
+password: <input type="text" #passBox (keyup)="password = passBox.value"><br/>
+<input type="button" value="Login" (click)="login()"><br/><br/>
+<h2>{{errorMessage}}</h2>
