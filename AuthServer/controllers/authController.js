@@ -9,7 +9,7 @@ router.post('/login', function(req, res) {
     const password = req.body.password;
 
     //if (validateEmailAndPassword()) {
-    if (true) 
+    if (username != "") 
     {
        //const userId = findUserIdForUserName(username);
         const userId = "someuserid";
@@ -21,10 +21,6 @@ router.post('/login', function(req, res) {
                              RSA_PRIVATE_KEY,
                             {expiresIn: 7200  } // expires in 2 hours
                             );
-        
-        if(username == "") {
-            tokenData = ""   
-        }
 
         let roleData = "user";
         if(username == "Uriel") {
