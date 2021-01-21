@@ -1,0 +1,8 @@
+TV Shows:
+<select #showsCombo (change)="selectShow(+showsCombo.value)">
+    <option *ngFor="let show of shows" [value]="[show.id]">{{show.name}}</option>
+</select>
+
+<br/><br/><br/>
+
+<router-outlet></router-outlet>

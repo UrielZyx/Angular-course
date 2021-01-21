@@ -53,6 +53,8 @@ import { Ex10UsersComponent } from './ex10/ex10-users/ex10-users.component';
 import { Ex10MenuComponent } from './ex10/ex10-menu/ex10-menu.component';
 import { Ex10GuardService } from './ex10/ex10-guard.service';
 import { Ex10AuthTokenInterceptorService } from './ex10/ex10-auth-token-interceptor.service';
+import { TvMainComponent } from './tv-shows/tv-main/tv-main.component';
+import { TvShowComponent } from './tv-shows/tv-show/tv-show.component';
 
 const routes: Routes = [
   //SPA demo
@@ -78,10 +80,13 @@ const routes: Routes = [
   // {path: "tasks/:id", component: TaskListComponent}
 
   //Ex10
-  {path: "", component: Ex10LoginComponent},
-  {path: "menu", component: Ex10MenuComponent},
-  {path: "products", component: Ex10ProductsComponent},
-  {path: "users", component: Ex10UsersComponent, canActivate: [Ex10GuardService]}
+  // {path: "", component: Ex10LoginComponent},
+  // {path: "menu", component: Ex10MenuComponent},
+  // {path: "products", component: Ex10ProductsComponent},
+  // {path: "users", component: Ex10UsersComponent, canActivate: [Ex10GuardService]}
+
+  //TV shows
+  {path:"show/:id", component: TvShowComponent}
 ]
 
 @NgModule({
@@ -131,6 +136,8 @@ const routes: Routes = [
     Ex10LoginComponent,
     Ex10ProductsComponent,
     Ex10UsersComponent,
+    TvMainComponent,
+    TvShowComponent,
   ],
   imports: [
     BrowserModule,
@@ -141,7 +148,7 @@ const routes: Routes = [
     StoreModule.forRoot({reducer: MyReducer})
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: Ex10AuthTokenInterceptorService, multi: true}
+    // {provide: HTTP_INTERCEPTORS, useClass: Ex10AuthTokenInterceptorService, multi: true}
   ],
   bootstrap: [AppComponent]
 })
