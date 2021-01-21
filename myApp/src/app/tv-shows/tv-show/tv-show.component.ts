@@ -18,10 +18,9 @@ export class TvShowComponent implements OnInit {
 
   ngOnInit(): void {
     this.subs[0] = this.route.params.subscribe(params => {
-      this.subs[1] = this.http.get<any[]>("http://api.tvmaze.com/shows/" + params["id"])
+      this.subs[1] = this.show = this.http.get<any[]>("http://api.tvmaze.com/shows/" + params["id"])
         .subscribe(data => {
           this.show = data
-          console.log(this.show.image.medium)
         })
     })
   }
